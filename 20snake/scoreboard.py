@@ -7,5 +7,10 @@ class Scoreboard(turtle.Turtle):
   self.goto(0, 260)
   self.color("white")
   self.ht()
-  self.write("Score: 0", align="center", font=("Courier", 24, "normal"))
+  self.score = 0
+  self.write(f"Score: {self.score}", align="center", font=("Courier", 24, "normal"))
   
+ def puanart(self):
+  self.score += 1
+  self.clear()
+  self.write(f"Score: {self.score}", align="center", font=("Courier", 24, "normal"))
