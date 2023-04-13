@@ -1,6 +1,7 @@
 import turtle
 import time
 import snake
+import food
 ekran = turtle.Screen()
 ekran.setup(600, 600)
 ekran.bgcolor("black")
