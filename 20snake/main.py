@@ -19,5 +19,8 @@ while game_is_on:
  ekran.update()
  time.sleep(0.1)
  my_snake.ileri()
+ 
+ if my_snake.parcalar[0].distance(yemek) < 15:
+ yemek.kabom()
 
 ekran.exitonclick()
