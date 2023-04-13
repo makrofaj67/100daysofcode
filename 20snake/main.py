@@ -25,5 +25,6 @@ while game_is_on:
  
  if my_snake.parcalar[0].distance(yemek) < 15:
  yemek.kabom()
+ skor.puanart()
 
 ekran.exitonclick()
