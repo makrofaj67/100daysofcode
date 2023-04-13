@@ -9,10 +9,10 @@ ekran.tracer(0)
 my_snake = snake.Snake()
 
 ekran.listen()
-ekran.listen(my_snake.up, "Up")
-ekran.listen(my_snake.down, "Down")
-ekran.listen(my_snake.left, "Left")
-ekran.listen(my_snake.right, "Right")
+ekran.onkey(my_snake.up, "Up")
+ekran.onkey(my_snake.down, "Down")
+ekran.onkey(my_snake.left, "Left")
+ekran.onkey(my_snake.right, "Right") ##kuzenim ekran.listen yazmış hepsine
 
 game_is_on = True
 while game_is_on:
