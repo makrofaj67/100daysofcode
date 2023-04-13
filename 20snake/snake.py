@@ -16,6 +16,15 @@ class Snake:
    yenikisim.goto(pozisyon)
    self.parcalar.append(yenikisim)
    
+ def up(self):
+  self.parcalar[0].setheading(90)
+ def down(self):
+  self.parcalar[0].setheading(270)
+ def left(self):
+  self.parcalar[0].setheading(180)
+ def right(self):
+  self.parcalar[0].setheading(0)
+   
  def ileri(self):
   for i in range(len(self.parcalar) - 1, 0, -1):
    yenix = self.parcalar[i-1].xcor()
