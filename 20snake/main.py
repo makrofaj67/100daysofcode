@@ -6,7 +6,10 @@ ekran.setup(600, 600)
 ekran.bgcolor("black")
 ekran.title("yılan oyunu")
 ekran.tracer(0)
+
 my_snake = snake.Snake()
+yemek = food.Food()
+skor = scoreboard.Scoreboard()
 
 ekran.listen()
 ekran.onkey(my_snake.up, "Up")
