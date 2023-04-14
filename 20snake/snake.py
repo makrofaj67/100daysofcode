@@ -31,3 +31,7 @@ class Snake:
    yeniy = self.parcalar[i-1].ycor()
    self.parcalar[i].goto(yenix, yeniy)
   self.parcalar[0].forward(MOVE_DISTANCE)
+  
+ def kisimekle(self):
+  yeni_kisim = self.parcalar[-1].clone()
+  self.parcalar.append(yeni_kisim)
