@@ -29,5 +29,11 @@ while game_is_on:
  if my_snake.parcalar[0].distance(yemek) < 15:
   yemek.kabom()
   skor.puanart()
-
+  my_snake.kisimekle()
+  
+ if my_snake.parcalar[0].xcor() > 280 or my_snake.parcalar[0].xcor() < -280 or my_snake.parcalar[0].ycor() > 280 or my_snake.parcalar[0].ycor() < -280:
+  game_is_on = False
+  skor.clear()
+  skor.gameover()
+  
 ekran.exitonclick()
