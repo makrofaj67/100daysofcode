@@ -13,6 +13,7 @@ ekran.tracer(0)
 my_snake = snake.Snake()
 yemek = food.Food()
 skor = scoreboard.Scoreboard()
+skor.puanbaslangıc()
 
 ekran.listen()
 ekran.onkey(my_snake.up, "Up")
