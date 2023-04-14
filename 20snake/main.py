@@ -37,4 +37,11 @@ while game_is_on:
   skor.clear()
   skor.gameover()
   
+ for kisim in my_snake.parcalar[1:]:
+  if my_snake.parcalar[0].distance(kisim) < 10:
+   game_is_on = False
+   skor.clear()
+   skor.gameover()
+ 
+  
 ekran.exitonclick()
