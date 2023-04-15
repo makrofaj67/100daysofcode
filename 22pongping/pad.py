@@ -14,7 +14,9 @@ class Pad(turtle.Turtle):
   self.st()
   
  def up(self):
-  self.sety(self.ycor() + 20)
+  if self.ycor() < 260:
+   self.sety(self.ycor() + 20)
  def down(self):
-  self.sety(self.ycor() - 20)
+  if self.ycor() > -260:
+   self.sety(self.ycor() - 20)
   

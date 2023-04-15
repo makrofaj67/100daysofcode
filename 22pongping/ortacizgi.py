@@ -16,4 +16,3 @@ class OrtaCizgi(turtle.Turtle):
    self.forward(10)
    self.penup()
    self.forward(10)
-   
