@@ -8,7 +8,12 @@ class ScoreBoard(turtle.Turtle):
   self.color("white")
   self.goto(x, 300)  
   self.score = 0
-  self.write(f"{self.score}", align="center", font=("Times New Roman", 24, "normal"))
+  self.update_skor()
+  
+ def update_skor(self):
+  self.write(f"{self.score}", align="center", font=("Times New Roman", 24, "bold"))
   
  def skorart(self):
   self.score += 1
+  self.clear()
+  self.update_skor()

@@ -28,10 +28,22 @@ ekran.onkeypress(blok2.up, "Up")
 ekran.onkeypress(blok2.down, "Down")
 
 game_is_on = True
-while game_is_on:
-  ekran.update()
-  top.move()
-  time.sleep(0.1)
 
-  
+while game_is_on:
+ ekran.update()
+ top.move()
+ time.sleep(0.1)
+ if top.ycor() > 290 or top.ycor() < -290:
+  top.bouncekenar()
+ if top.distance(blok) < 30 and top.xcor() < 350:
+  top.bouncepad()
+ if top.distance(blok2) < 30 and top.xcor() > -350:
+  top.bouncepad()
+ if top.xcor() > 390:
+  top.restet()
+  skortahtasi1.skorart()
+ if top.xcor() < -390:
+  top.restet()
+  skortahtasi2.skorart()
 ekran.exitonclick()
+
