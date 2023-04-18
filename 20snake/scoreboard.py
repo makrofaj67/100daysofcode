@@ -1,4 +1,5 @@
 import turtle
+import os
 
 class Scoreboard(turtle.Turtle):
  def __init__(self):
@@ -8,15 +9,26 @@ class Scoreboard(turtle.Turtle):
   self.color("white")
   self.ht()
   self.score = 0
+  with open("20snake/highscore.txt", "r") as dosya:
+   self.highscore = int(dosya.read())  
   
  def puanart(self):
-  self.score += 1
-  self.clear()
-  self.write(f"Score: {self.score}", align="center", font=("Courier", 24, "normal"))
-
- def puanbaslangıc(self):
-  self.write(f"Score: {self.score}", align="center", font=("Courier", 24, "normal"))
+  self.score += 1 
+ 
+ def skortahtasiguncelle(self):
+  self.write(f"score: {self.score}, highscore: {self.highscore}")
   
- def gameover(self):
-  self.goto(0, 0)
-  self.write(f"Game Over, Score: {self.score}", align="center", font=("Courier", 24, "normal"))
+ def yuksekskorguncelle(self):
+  if self.score > self.highscore:
+   self.highscore = self.score
+ 
+ def resetscore(self):
+  self.score = 0
+   
+ def highscoreyaz(self):
+  with open("20snake/highscore.txt", "w") as dosya:
+   dosya.write(f"{self.highscore}")
+ 
+ def highscoreoku(self):
+  with open("20snake/highscore.txt", "r") as dosya:
+   self.highscore = int(dosya.read())
